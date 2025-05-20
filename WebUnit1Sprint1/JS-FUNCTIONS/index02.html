@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables Scopes</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function calculateArea() {
+        const width = 10;
+        const height = 5;
+        const area = width * height;
+        console.log("The area is: " + area);
+      }
+
+      calculateArea(); // Outputs: "The area is: 50"
+      //console.log(width); // Error: width is not defined outside the function
+
+      //LOCAL VARIABLES
+      //Local variables are declared inside a function and can only be used within that function:
+      function showLocalVariable() {
+        const localVar = "I'm local";
+        console.log(localVar); // Works fine
+      }
+
+      showLocalVariable();
+      // console.log(localVar); // Error: localVar is not defined
+
+      //GLOBAL VARIABLES
+      //Global variables are declared outside of any function and can be accessed anywhere in your code:
+      const globalVar = "I'm global";
+
+      function showGlobalVariable() {
+        console.log(globalVar); // Works fine - can access the global variable
+      }
+
+      showGlobalVariable(); // Outputs: "I'm global"
+      console.log(globalVar); // Also works: "I'm global"
+
+      //LOCAL VS GLOBAL VALUE
+      //When local and global variables have the same name, the local variable takes precedence inside the function:
+
+      const value = "Global value";
+
+      function showValue() {
+        const value = "Local value";
+        console.log(value); // Outputs: "Local value" (local variable)
+      }
+
+      showValue();
+      console.log(value); // Outputs: "Global value" (global variable)
+
+      //ARROW FUNCTIONS VS TRADITIONAL FUNCTIONS
+
+      //traditional function
+      const multiply = function (a, b) {
+        return a * b;
+      };
+
+      console.log(multiply(3, 5));
+
+      //arrow function
+      const sum = (a, b) => {
+        return a + b;
+      };
+
+      //explicit return
+      const sum2 = (a, b) => a + b;
+    </script>
+  </body>
+</html>
