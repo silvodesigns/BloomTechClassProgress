@@ -2,8 +2,8 @@
 
 - Unit 1 Sprint 1
   1. - [x] Module 1
-  2. - [ ] Module 2
-  3. - [ ] Module 3
+  2. - [x] Module 2
+  3. - [x] Module 3
   4. - [ ] Module 4
 - Unit 1 Sprint 2
   1. - [x] Module 1
