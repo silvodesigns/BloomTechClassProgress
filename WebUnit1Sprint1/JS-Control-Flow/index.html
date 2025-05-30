@@ -1,101 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS CONTROL FLOW</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
+      //understanding if statement structure
+      let loveJS = true;
 
-        //understanding if statement structure
-        let loveJS = true;
+      if (loveJS) {
+        console.log("love JS"); // this sentence only runs if it evaluates to truth
+      }
 
-        if(loveJS){
-            console.log('love JS');// this sentence only runs if it evaluates to truth
-        }
+      //Real-Wold Example 1
+      let teamCount = 10;
 
-        //Real-Wold Example 1
-        let teamCount = 10;
+      if (teamCount < 12) {
+        console.log("Inform the team that they are not a full team");
+      }
 
-        if(teamCount < 12){
-            console.log('Inform the team that they are not a full team')
-        }
+      //Real-Wold Example 2
+      //Checking if a name has been entered
 
-         //Real-Wold Example 2
-         //Checking if a name has been entered
+      let name = "";
+      if (!name) {
+        console.log("Ask the team captain to update the runner's name");
+      }
 
-         let name = "";
-         if(!name){
-            console.log("Ask the team captain to update the runner's name");
+      //Logical Operators
+      let a = 5;
+      let b = 20;
+      let c = 8;
 
-         }
+      let sum = a > b || b > c;
+      console.log(sum);
 
-         //Logical Operators
-         let a = 5;
-         let b = 20;
-         let c = 8;
+      //TYPES OF LOGICAL OPERATORS
 
-         let sum = ((a > b) || (b > c));
-         console.log(sum);
+      //&& Returns TRUE if both conditions are met
 
+      let isRegistered = true;
+      let hasPaid = true;
 
-         //TYPES OF LOGICAL OPERATORS
+      if (isRegistered && hasPaid) {
+        console.log("Welcome to the event!");
+      } else {
+        console.log("Please Complete Registration and Payment");
+      }
 
-        //&& Returns TRUE if both conditions are met
+      // || Returns Truth if only 1 of the conditions are met
 
-         let isRegistered = true;
-         let hasPaid = true;
+      let isAdmin = false;
+      let isPremiumUser = true;
 
-         if(isRegisterted && hasPaid){
-            console.log("Welcome to the event!");
-         } else {
-            console.log("Please Complete Registration and Payment");
-         }
+      if (isAdmin || isPremiumUser) {
+        console.log("You have access to Premiun features");
+      } else {
+        console.log("Access denied, upgrade to premium for more features");
+      }
 
-         // || Returns Truth if only 1 of the conditions are met
+      // ! The NOT operator reverses the boolean value
 
-         let isAdmin = false;
-         let isPremiumUser = true;
+      let isEmailVerified = false;
 
-         if(isAdmin ||  isPremiumUser){
-            console.log("You have access to Premiun features");
-         } else {
-            console.log("Access denied, upgrade to premium for more features");
-         }
+      if (!isEmailVerified) {
+        console.log("Please verify your email");
+      }
 
-         // ! The NOT operator reverses the boolean value
+      //Combining Logical Operators
 
-         let isEmailVerified = false;
+      let age = 25;
+      let hasTicket = true;
+      let isVip = true;
 
-         if(!isEmailVerified){
-            console.log("Please verify your email");
-         }
+      if ((age >= 18 && hasTicket) || isVIP) {
+        console.log("Welcome to the event!");
+      } else {
+        console.log("Sorry, you cannot enter.");
+      }
 
-         //Combining Logical Operators
+      //LOOPS
 
-         let age = 25;
-         let hasTicket = true;
-         let isVip = true;
+      //For Loop is used when you know in advanced how many times you want to execute a block of code.
+      //Print numbers 1 to 5
 
-        if ((age >= 18 && hasTicket) || isVIP) {
-            console.log("Welcome to the event!");
-         } else {
-            console.log("Sorry, you cannot enter.");
-        }
+      for (let i = 1; i <= 5; i++) {
+        console.log("number " + i);
+      }
 
+      //While loop executes as long as the condition is true
 
-        //LOOPS
-   
+      let count = 1;
 
+      while (count <= 5) {
+        console.log("Count is :" + count);
+        count++;
+      }
 
+      //Do While loop
+      //useful when you want your code to run at least once regardless of the condition
 
+      let x = 1;
+      do {
+        console.log("The number is " + x);
+        x++;
+      } while (x <= 5);
 
+      //Use for when you know the number of iterations.
+      //Use while when you don't know how many times the loop will run.
+      //Use do-while when you need the code to execute at least once.
 
+      //Switch statements
+      let day = 3;
+      let dayName;
 
+      switch (day) {
+        case 1:
+          dayName = "Monday";
+          break;
+        case 2:
+          dayName = "Tuesday";
+          break;
+        case 3:
+          dayName = "Wednesday";
+          break;
+        case 4:
+          dayName = "Thursday";
+          break;
+        case 5:
+          dayName = "Friday";
+          break;
+        case 6:
+          dayName = "Saturday";
+          break;
+        case 7:
+          dayName = "Sunday";
+          break;
+        default:
+          dayName = "Invalid day";
+      }
 
+      console.log("Today is " + dayName); // Today is Wednesday
     </script>
-    
-</body>
+  </body>
 </html>
